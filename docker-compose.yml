@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  managerchat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: managerchat
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
