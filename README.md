@@ -19,7 +19,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 #### Passo 1: Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/despossivel/manager-tickets-api.git
 cd seu-repositorio
 ```
 
@@ -58,7 +58,7 @@ http://localhost:3000/api
 #### Passo 1: Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/despossivel/manager-tickets-api.git
 cd seu-repositorio
 ```
 
@@ -102,6 +102,7 @@ src/
 │   ├── dto/
 │   │   ├── create-ticket.dto.ts
 │   │   └── update-ticket.dto.ts
+|   ├── ticket.entity.ts
 │   ├── tickets.controller.ts
 │   ├── tickets.module.ts
 │   ├── tickets.service.ts
@@ -147,25 +148,8 @@ http://localhost:3000/api
 
 ## Tecnologias Utilizadas
 
-- **NestJS** - Framework backend usado para construir a API.
-- **SQLite** - Banco de dados leve utilizado para armazenar os tickets.
 - **Swagger** - Ferramenta para gerar a documentação da API.
-- **Docker** - Utilizado para conteinerização da aplicação.
+- **NestJS** - Framework backend usado para construir a API.
 - **TypeScript** - Linguagem de programação utilizada no projeto.
-
----
-
-## Contribuição
-
-1. Faça um fork do projeto.
-2. Crie uma branch para sua feature (`git checkout -b feature/sua-feature`).
-3. Faça commit das suas alterações (`git commit -m 'Adiciona minha feature'`).
-4. Faça push para sua branch (`git push origin feature/sua-feature`).
-5. Abra um pull request.
-
----
-
-## Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
- 
+- **Docker** - Utilizado para conteinerização da aplicação.
+- **Kubernets** - Utilizado para orquestração de containers.
