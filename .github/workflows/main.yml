@@ -33,12 +33,12 @@ jobs:
           echo "VITE_HOST_API=${{ vars.VITE_HOST_API }}" > .env
  
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: despossivel/managerticketsfront:${{ steps.slug.outputs.sha8 }}
+      # - name: Build and push Docker image
+      #   uses: docker/build-push-action@v2
+      #   with:
+      #     context: .
+      #     push: true
+      #     tags: despossivel/managerticketsfront:${{ steps.slug.outputs.sha8 }}
 
       # - name: Replace image tag in deployment.yml
       #   run: sed -i 's|managerticketsfront:TAG|managerticketsfront:${{ steps.slug.outputs.sha8 }}|g' ./.k8s/deployment.yml
