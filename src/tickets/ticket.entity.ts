@@ -1,7 +1,12 @@
 export class Ticket {
-    id: number;
-    customer: string;
-    lastMsg: string;
-    status: 'Aberto' | 'Fechado';
-  }
-  
+  id: number;
+  customer: string;
+  historic: Historic[];
+  status: 'Aberto' | 'Fechado';
+}
+
+
+export class Historic {
+  from: string
+  msg: string
+}

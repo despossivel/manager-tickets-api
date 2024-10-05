@@ -7,11 +7,6 @@ export class CreateTicketDto {
   @IsNotEmpty()
   customer: string;
 
-  @ApiProperty({ example: 'Olá, preciso de ajuda.', description: 'Última mensagem recebida' })
-  @IsString()
-  @IsNotEmpty()
-  lastMsg: string;
-
   @ApiProperty({ example: 'Aberto', description: 'Status do ticket' })
   @IsString()
   @IsNotEmpty()

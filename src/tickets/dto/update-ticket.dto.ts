@@ -1,5 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsString, IsOptional } from 'class-validator';
+import {
+  Historic
+} from "../ticket.entity"
 
 export class UpdateTicketDto {
   @ApiProperty({ example: 'Customer A', description: 'Customer name', required: false })
@@ -7,10 +10,10 @@ export class UpdateTicketDto {
   @IsOptional()
   customer?: string;
 
-  @ApiProperty({ example: 'New message.', description: 'Last message received', required: false })
+  @ApiProperty({ example: 'Historic', description: 'Historic of messages', required: false })
   @IsString()
   @IsOptional()
-  lastMsg?: string;
+  historic?: Historic[];
 
   @ApiProperty({ example: 'Closed', description: 'Ticket status', required: false })
   @IsString()
