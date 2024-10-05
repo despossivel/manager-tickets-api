@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post, Patch, Param } from '@nestjs/common';
 import { TicketsService } from './tickets.service';
 import { ApiTags, ApiOperation, ApiResponse, ApiBody, ApiParam } from '@nestjs/swagger';
-import { CreateTicketDto } from './dto/create-ticket.dto';
+import { CreateTicketDto, TicketDto } from './dto/ticket.dto';
 import { Ticket } from './ticket.entity';  
 
 @ApiTags('tickets')  
@@ -10,7 +10,12 @@ export class TicketsController {
   constructor(private readonly ticketsService: TicketsService) {}
 
   @Get()
-  @ApiOperation({ summary: 'List all tickets' })  
+  @ApiOperation({ summary: 'List all tickets' }) 
+  @ApiResponse({
+    status: 200,
+    description: 'The list of tickets has been successfully retrieved.',
+    type: [TicketDto],
+  }) 
   getAllTickets() {
     return this.ticketsService.findAll();
   }

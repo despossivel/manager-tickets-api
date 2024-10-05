@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Ticket } from './ticket.entity';
-import { CreateTicketDto } from './dto/create-ticket.dto';
+import { CreateTicketDto } from './dto/ticket.dto';
 
 
 @Injectable()
