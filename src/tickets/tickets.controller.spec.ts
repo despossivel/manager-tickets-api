@@ -11,7 +11,7 @@ describe('TicketsService', () => {
 
   it('must return all tickets', () => {
     const tickets = service.findAll();
-    expect(tickets.length).toBe(2);
+    expect(tickets.length).toBe(4);
     expect(tickets[0]).toHaveProperty('customer', 'Cliente A');
     expect(tickets[1]).toHaveProperty('status', 'Fechado');
   });
